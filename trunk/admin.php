@@ -40,10 +40,10 @@ if(isset($_POST['submit']) && !empty($_POST['mabh']) && !empty($_POST['tenbh']))
     <div data-role="footer" data-id="foo1" data-position="fixed">
 	<div data-role="navbar">
 		<ul>
-			<li><a href="b.html">Ca Sĩ</a></li>
+			<li><a href="casi.php">Ca Sĩ</a></li>
             <li><a href="index.php" class="ui-btn-active ui-state-persist">Bài Hát</a></li>
-			<li><a href="c.html">Nhạc Sĩ</a></li>
-			<li><a href="d.html">Member</a></li>
+			<li><a href="nhacsi.php">Nhạc Sĩ</a></li>
+			<li><a href="member.php">Member</a></li>
 		</ul>
 	</div><!-- /navbar -->
 </div><!-- /footer -->
