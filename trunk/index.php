@@ -16,7 +16,7 @@ $listBH = $db->listBH();
 </head>
 <body>
 	<div class="ui-bar ui-bar-b">
-		<a href="login.php" data-rel="dialog" data-role="button" data-inline="true" data-mini="true">Nhập Bài Hát</a>
+		<a <?php if($_COOKIE['pass'] =='good'){ echo 'href="admin.php" '; } else { echo  ' href="login.php"  data-rel="dialog" '; }?> data-role="button" data-inline="true" data-mini="true">Nhập Bài Hát</a>
 	</div><br/>
     <ul data-dividertheme="e" data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
     <br/>

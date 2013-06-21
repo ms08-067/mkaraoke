@@ -2,11 +2,11 @@
 require_once "./models/classDB.php";
 if(isset($_POST['submit']) && !empty($_POST['password'])) {
 	if($_POST['password'] == "good"){
+		setcookie("pass", "good", time() + 60*60 );
 		header('Location: admin.php');
 	}
 	
 }	
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -27,7 +27,14 @@ if(isset($_POST['submit']) && !empty($_POST['password'])) {
         <input name="tenbh" id="text-basic" value="" type="text">-->
         <label for="text-basic">Mật Khẩu</label>
         <input name="password" id="password" value="" autocomplete="off" type="password">
-
+		<?php 
+			if(isset($_POST['submit']) && !empty($_POST['password'])) {
+				if($_POST['password'] != "good"){
+					echo "<label style='color: red;' for='text-basic'>Nhập sai mật khẩu</label><br/>";
+				}
+				
+			}
+		?>	
         
         <input data-theme="b" data-inline="true" value="Đăng nhập" type="submit" name="submit" />
     

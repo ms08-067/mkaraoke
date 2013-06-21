@@ -1,4 +1,5 @@
 <?php 
+if($_COOKIE['pass'] =='good'):
 require_once "./models/classDB.php";
 if(isset($_POST['submit']) && !empty($_POST['mabh']) && !empty($_POST['tenbh'])) {
 	$db = new db;
@@ -49,3 +50,7 @@ if(isset($_POST['submit']) && !empty($_POST['mabh']) && !empty($_POST['tenbh']))
 </div><!-- /footer -->
 </body>
 </html>
+<?php 
+else:
+	header('Location: login.php');
+endif; ?>
