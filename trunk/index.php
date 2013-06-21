@@ -23,7 +23,7 @@ $listBH = $db->listBH();
     <?php 
 		while($row = mysql_fetch_assoc($listBH)){
 	?>		
-			<li><a href="index.html"><?php echo $row['tenBH'];?></a></li>
+			<li><a href="index.html"><?php echo $row['tenbh']." - ".$row['mabh']; ?></a></li>
 		
 	<?PHP		
 		}

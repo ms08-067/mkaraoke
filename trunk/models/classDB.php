@@ -28,33 +28,10 @@ class db {
 	}
 	function listBH(){
 	
-		$result = array();
-		$sql = "SELECT id,mabh,tenbh,casi,nhacsi,loibh,member FROM list WHERE 1";
+		//$result = array();
+		$sql = "SELECT id,mabh,tenbh,casi,nhacsi,loibh,member FROM list WHERE 1 ORDER BY tenbh";
 	    $rs = mysql_query($sql) or die(mysql_error());
-		
-		while($row = mysql_fetch_assoc($rs)){
-				echo $row['id']."<br/>";
-				echo $row['mabh']."<br/>";
-				echo $row['tenbh']."<br/>";
-				echo $row['casi']."<br/>";
-				echo $row['nhacsi']."<br/>";
-				echo $row['loibh']."<br/>";
-				echo $row['member']."<br/>";
-				
-				
-				/*
-				$result[]['id'] = $row['id'];
-				$result[]['mah'] = $row['mabh'];
-				$result[]['tenbh'] = $row['tenbh'];
-				$result[]['casi'] = $row['casi'];
-				$result[]['nhacsi'] = $row['nhacsi'];
-				$result[]['loibh'] = $row['loibh'];
-				$result[]['member'] = $row['member'];
-				*/
-		}
-	  exit();
-	  echo '<pre>';print_r($result);exit();
-		return $result;
+		return $rs;
 	}
 } //class db
 ?>
