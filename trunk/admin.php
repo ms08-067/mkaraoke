@@ -1,11 +1,12 @@
 <?php 
-if($_COOKIE['pass'] =='good'):
+if(isset($_COOKIE['pass']) && $_COOKIE['pass'] == 'good'):
 require_once "./models/classDB.php";
-if(isset($_POST['submit']) && !empty($_POST['mabh']) && !empty($_POST['tenbh'])) {
-	$db = new db;
-	$result = $db->addToList($_POST);
-}	
+if(isset($_POST['submit']) && !empty($_POST['tenbh'])) {
 
+	$db = new db;
+	$db->addToList($_POST);
+	
+}	
 ?>
 <!doctype html>
 <html lang="en">
@@ -22,7 +23,7 @@ if(isset($_POST['submit']) && !empty($_POST['mabh']) && !empty($_POST['tenbh']))
 		<a href="index.php" data-role="button" data-inline="true" data-mini="true">Home</a>
 	</div>
 	
-    <form id="frm" action="" method="post">
+    <form id="frm" action="admin.php" method="post">
     
         <label for="text-basic">Mã số bài hát: </label>
         <input name="mabh" pattern="[0-9]*" id="number-pattern" value="" type="number">
@@ -51,6 +52,7 @@ if(isset($_POST['submit']) && !empty($_POST['mabh']) && !empty($_POST['tenbh']))
 </body>
 </html>
 <?php 
-else:
-	header('Location: login.php');
-endif; ?>
+else: 
+	header('Location: index.php');
+endif;
+?>

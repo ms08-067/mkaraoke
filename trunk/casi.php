@@ -1,7 +1,7 @@
 <?php 
 include "./models/classDB.php";
 $db = new db;
-$listBH = $db->listBH();
+$listCaSi = $db->listCaSi();
 
 ?>
 <!doctype html>
@@ -21,9 +21,9 @@ $listBH = $db->listBH();
     <ul data-dividertheme="e" data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
     <br/>
     <?php 
-		while($row = mysql_fetch_assoc($listBH)){
+		while($row = mysql_fetch_assoc($listCaSi)){
 	?>		
-			<li><a href="detail.php?id=<?php echo $row['id'];?>"><?php echo $row['tenbh']." - ".$row['mabh']." - ".$row['casi']; ?></a></li>
+			<li><a href="detail.php?id=<?php echo $row['id'];?>"><?php echo $row['casi']; ?></a></li>
 		
 	<?PHP		
 		}

@@ -3,9 +3,9 @@ class db {
 	public $conn = NULL;
 	public $result = NULL;
 	public $host="localhost";
-	public $user="root";
-	public $pass="";
-	public $database="karaoke";
+	public $user="joomlavi";
+	public $pass="sbUM0iz2";
+	public $database="joomlavi_karaoke";
 	private $author="Hung Phan";
 	protected $version="1.0";
 	function __construct(){
@@ -23,7 +23,8 @@ class db {
 	function addToList($post){
 		$sql = "INSERT INTO list (id, maBH, tenBH, casi, nhacsi, loiBH, member) 
 		                   VALUES ('', '".intval($post['mabh'])."', '".$post['tenbh']."', '".$post['casi']."', '".$post['nhacsi']."', '".$post['loibh']."','')";
-		return mysql_query($sql) ;
+		
+	    mysql_query($sql) or die(mysql_error()) ;
 		
 	}
 	function listBH(){
@@ -31,6 +32,15 @@ class db {
 		//$result = array();
 		$sql = "SELECT id,mabh,tenbh,casi,nhacsi,loibh,member FROM list WHERE 1 ORDER BY tenbh";
 	    $rs = mysql_query($sql) or die(mysql_error());
+		return $rs;
+	}
+	function listCaSi(){
+	
+		//$result = array();
+		$sql = "SELECT id,mabh,tenbh,casi,nhacsi,loibh,member FROM list WHERE 1 ORDER BY casi";
+	    
+		$rs = mysql_query($sql) or die(mysql_error());
+		
 		return $rs;
 	}
 } //class db
