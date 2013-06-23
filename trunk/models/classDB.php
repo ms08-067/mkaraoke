@@ -3,9 +3,12 @@ class db {
 	public $conn = NULL;
 	public $result = NULL;
 	public $host="localhost";
-	public $user="joomlavi";
-	public $pass="sbUM0iz2";
-	public $database="joomlavi_karaoke";
+	//public $user="joomlavi";
+	//public $pass="sbUM0iz2";
+	//public $database="joomlavi_karaoke";
+	public $user="root";
+	public $pass="";
+	public $database="karaoke";
 	private $author="Hung Phan";
 	protected $version="1.0";
 	function __construct(){
@@ -37,7 +40,7 @@ class db {
 	function listCaSi(){
 	
 		//$result = array();
-		$sql = "SELECT id,mabh,tenbh,casi,nhacsi,loibh,member FROM list WHERE 1 ORDER BY casi";
+		$sql = "SELECT DISTINCT(casi),id,mabh,tenbh,nhacsi,loibh,member FROM list WHERE 1 ORDER BY casi";
 	    
 		$rs = mysql_query($sql) or die(mysql_error());
 		
