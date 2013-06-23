@@ -46,5 +46,14 @@ class db {
 		
 		return $rs;
 	}
+	function detail($id){
+	
+		//$result = array();
+		$sql = "SELECT casi,id,mabh,tenbh,nhacsi,loibh,member FROM list WHERE id='".$id."'";
+	    
+		$rs = mysql_query($sql) or die(mysql_error());
+		
+		return $rs;
+	}
 } //class db
 ?>
