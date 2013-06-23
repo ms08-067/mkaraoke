@@ -50,9 +50,9 @@ body {
 		</div>
 		<div class="twocol"><p>Hinh Ca Si</p></div>
 		<div class="tencol last">
+			<strong>Mã Bài Hát: </strong><input <?php if((!isset($_COOKIE['pass'])) && ($_COOKIE['pass'] !='good')) echo "readonly" ?> type="text" value="<?php echo $row['mabh']; ?>" id="mabh" name="mabh" /><br/>
 			<strong>Ca Sĩ:</strong> <?php echo $row['casi']; ?><br/>
 			<strong>Nhạc Sĩ: </strong><?php echo $row['nhacsi']; ?>
-			
 		</div>
 		<div class="twelvecol last">
 			<br/>

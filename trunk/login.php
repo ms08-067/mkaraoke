@@ -2,7 +2,7 @@
 require_once "./models/classDB.php";
 if(isset($_POST['submit']) && !empty($_POST['password'])) {
 	if($_POST['password'] == "good"){
-		setcookie("pass", "good", time() + 60*60*2 );
+		setcookie("pass", "good", time() + 60*60*5 );
 		header('Location: admin.php');
 	}
 	
