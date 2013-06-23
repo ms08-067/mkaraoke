@@ -6,37 +6,61 @@ if(isset($_GET['id']) && $_GET['id'] != ''){
 	settype($id,"int");
 	$listBH = $db->detail($id);
 }
-
-
 ?>
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Danh Sách Bài Hát Karaoke </title>
+<!-- 1140px Grid styles for IE -->
+<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+<!-- The 1140px Grid - http://cssgrid.net/ -->
+<link rel="stylesheet" href="css/1140.css" type="text/css" media="screen" />
+<!-- Your styles -->
+<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<title>Chi tiet Bai Hat</title>
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
 <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+<!--Delete embedded styles, just for example.-->
+	<style type="text/css">
+	
+	body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	
+	.container p {
+	color: #fff;
+	line-height: 100px;
+	background: #000;
+	text-align: center;
+	margin: 20px 0 0 0;
+	}
+	
+	</style>
 </head>
 <body>
 	<div class="ui-bar ui-bar-b">
 		<a <?php if($_COOKIE['pass'] =='good'){ echo 'href="admin.php" '; } else { echo  ' href="login.php"  data-rel="dialog" '; }?> data-role="button" data-inline="true" data-mini="true">Nhập Bài Hát</a>
 	</div><br/>
-    <ul data-dividertheme="e" data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
-    <br/>
-    <?php 
-		while($row = mysql_fetch_assoc($listBH)){
-	?>		
-			<li><a href="detail.php?id=<?php echo $row['id'];?>"><?php echo $row['tenbh']." - ".$row['mabh']." - ".$row['casi']; ?></a></li>
-		
-	<?PHP		
-		}
-	?>
-	
-   
-</ul>
-
+    <div class="container">
+	<div class="row">
+		<div class="threecol">
+			<p>Three columns</p>
+		</div>
+		<div class="threecol">
+			<p>Three columns</p>
+		</div>
+		<div class="threecol">
+			<p>Three columns</p>
+		</div>
+		<div class="threecol last">
+			<p>Three columns</p>
+		</div>
+	</div>
+</div>
     <!-------------------->
     <div data-role="footer" data-id="foo1" data-position="fixed">
 	<div data-role="navbar">
