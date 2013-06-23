@@ -4,7 +4,8 @@ if(isset($_GET['id']) && $_GET['id'] != ''){
 	$db = new db;
 	$id = $_GET['id'];
 	settype($id,"int");
-	$listBH = $db->detail($id);
+	$detail = $db->detail($id);
+	$row = mysql_fetch_assoc($detail);
 }
 ?>
 <!doctype html>
@@ -25,21 +26,18 @@ if(isset($_GET['id']) && $_GET['id'] != ''){
 <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 <!--Delete embedded styles, just for example.-->
-	<style type="text/css">
-	
-	body {
+<style type="text/css">
+body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	}
-	
-	.container p {
+}
+.container p {
 	color: #fff;
 	line-height: 100px;
 	background: #000;
 	text-align: center;
 	margin: 20px 0 0 0;
-	}
-	
-	</style>
+}
+</style>
 </head>
 <body>
 	<div class="ui-bar ui-bar-b">
@@ -47,17 +45,18 @@ if(isset($_GET['id']) && $_GET['id'] != ''){
 	</div><br/>
     <div class="container">
 	<div class="row">
-		<div class="threecol">
-			<p>Three columns</p>
+		<div class="twelvecol last">
+			<h3><?php echo $row['tenbh'];?></h3>
 		</div>
-		<div class="threecol">
-			<p>Three columns</p>
+		<div class="twocol"><p>Hinh Ca Si</p></div>
+		<div class="tencol last">
+			<strong>Ca Sĩ:</strong> <?php echo $row['casi']; ?><br/>
+			<strong>Nhạc Sĩ: </strong><?php echo $row['nhacsi']; ?>
+			
 		</div>
-		<div class="threecol">
-			<p>Three columns</p>
-		</div>
-		<div class="threecol last">
-			<p>Three columns</p>
+		<div class="twelvecol last">
+			<br/>
+			<?php echo $row['loibh']; ?>
 		</div>
 	</div>
 </div>
