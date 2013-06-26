@@ -23,7 +23,7 @@ $listBH = $db->listBH();
     <?php 
 		while($row = mysql_fetch_assoc($listBH)){
 	?>		
-			<li><a href="detail.php?id=<?php echo $row['id'];?>"><?php echo $row['tenbh']." - ".$row['mabh']." - ".$row['casi']; ?></a></li>
+			<li><a data-transition="slide" data-inline="true" href="detail.php?id=<?php echo $row['id'];?>"><?php echo $row['tenbh']." - ".$row['mabh']." - ".$row['casi']; ?></a></li>
 		
 	<?PHP		
 		}

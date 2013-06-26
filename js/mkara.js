@@ -9,10 +9,18 @@ $(function(e){
 				type: "POST",
 				data: 'mabh='+mabh+'&id='+id,
 				success: function (res) {
+					if(res == 1){
+						$("div#mess").removeClass("mess_fail").addClass("mess_updated").html("<font style='color: blue;'>Update successful.</font>");
+					}
+					else if(res == 0){
+						$("div#mess").removeClass("mess_updated").addClass("mess_fail").html("<font style='color: red;'>Update fail.</font>");
+					}
 					
-					alert(res);
 				}		
 			});
+		}
+		else {
+			alert("Please type number");
 		}
 	});//End a#update click
 });

@@ -33,7 +33,20 @@
 
 }
 div#mess {
-	height:48px;
-	background:#CCC;
-	/*background-image: url('../images/');*/
+	height:30px;
+	padding-left: 65px;
+	padding-top: 12px;
+	font-weight: bold;
+}
+div.mess_updated {
+
+	background-image: url('../images/s.png');;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+div.mess_fail {
+
+	background-image: url('../images/w.png');;
+	background-repeat: no-repeat;
+	background-position: left center;
 }
