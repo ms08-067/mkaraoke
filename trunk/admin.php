@@ -20,7 +20,7 @@ if(isset($_POST['submit']) && !empty($_POST['tenbh'])) {
 </head>
 <body>
 	<div class="ui-bar ui-bar-b">
-		<a href="index.php" data-role="button" data-inline="true" data-mini="true">Home</a>
+		<a data-transition="slide" data-inline="true" href="index.php" data-role="button" data-inline="true" data-mini="true">Home</a>
 	</div>
 	
     <form id="frm" action="admin.php" method="post">
