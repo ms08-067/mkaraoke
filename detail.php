@@ -25,6 +25,8 @@ if(isset($_GET['id']) && $_GET['id'] != ''){
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
 <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+
+<script type="text/javascript" src="js/mkara.js"></script>
 <!--Delete embedded styles, just for example.-->
 <style type="text/css">
 body {
@@ -53,7 +55,10 @@ body {
 		<div class="twocol"><p>Hinh Ca Si</p></div>
 		<div class="tencol last">
 			<strong>Mã Bài Hát: </strong><input data-mini="true" <?php if((!isset($_COOKIE['pass'])) && ($_COOKIE['pass'] !='good')) echo "readonly" ?> type="text" value="<?php echo $row['mabh']; ?>" id="mabh" name="mabh" />
-			<?php if((!isset($_COOKIE['pass'])) && ($_COOKIE['pass'] =='good')): ?><a href="#" data-role="button" data-inline="true" data-theme="b" data-mini="true">Cập Nhật Mã Bài Hát</a><?php endif;?><br/>
+			
+			<?php if((isset($_COOKIE['pass'])) && ($_COOKIE['pass'] =='good')): ?>
+				<a id="update" href="#" data-role="button" data-inline="true" data-theme="b" data-mini="true">Cập Nhật Mã Bài Hát</a><?php endif;?><br/>
+			<input type="hidden" name="idBH" id="idBH" value="<?php echo $_GET['id'];?>" />
 			<strong>Ca Sĩ:</strong> <?php echo $row['casi']; ?><br/>
 			<strong>Nhạc Sĩ: </strong><?php echo $row['nhacsi']; ?>
 		</div>
