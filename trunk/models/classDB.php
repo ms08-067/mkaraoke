@@ -77,6 +77,13 @@ class db {
 		
 		return $rs;
 	}
+	function updateBH($mabh,$id){
+		
+		$sql = "UPDATE list SET mabh = '".$mabh."' WHERE id='".$id."'";
+		$result = mysql_query($sql) or die(mysql_error());
+		return (mysql_affected_rows() > 0) ? 1 : 0; 
+		
+	}
 	function convert(){
 		/*
 		$sql = "SELECT DISTINCT casi FROM list WHERE 1";
