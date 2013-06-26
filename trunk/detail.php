@@ -59,6 +59,7 @@ body {
 			<?php if((isset($_COOKIE['pass'])) && ($_COOKIE['pass'] =='good')): ?>
 				<a id="update" href="#" data-role="button" data-inline="true" data-theme="b" data-mini="true">Cập Nhật Mã Bài Hát</a><?php endif;?><br/>
 			<input type="hidden" name="idBH" id="idBH" value="<?php echo $_GET['id'];?>" />
+			<div id="mess"></div>
 			<strong>Ca Sĩ:</strong> <?php echo $row['casi']; ?><br/>
 			<strong>Nhạc Sĩ: </strong><?php echo $row['nhacsi']; ?>
 		</div>

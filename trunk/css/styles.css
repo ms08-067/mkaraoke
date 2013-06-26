@@ -32,3 +32,8 @@
 	}*/
 
 }
+div#mess {
+	height:48px;
+	background:#CCC;
+	/*background-image: url('../images/');*/
+}
