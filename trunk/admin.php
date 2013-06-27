@@ -44,7 +44,7 @@ if(isset($_POST['submit']) && !empty($_POST['tenbh'])) {
 		<ul>
 			<li><a href="casi.php">Ca Sĩ</a></li>
             <li><a href="index.php" class="ui-btn-active ui-state-persist">Bài Hát</a></li>
-			<li><a href="nhacsi.php">Nhạc Sĩ</a></li>
+			<li><a href="loibh.php" data-transition="slide" data-inline="true">Lời Bài Hát</a></li>
 			<li><a href="member.php">Member</a></li>
 		</ul>
 	</div><!-- /navbar -->
