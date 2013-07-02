@@ -55,14 +55,10 @@ body {
 		<div class="twocol"><p>Hinh Ca Si</p></div>
 		<div class="tencol last">
 			<strong>Mã Bài Hát: </strong><input data-mini="true" <?php if((!isset($_COOKIE['pass'])) && ($_COOKIE['pass'] !='good')) echo "readonly" ?> type="text" value="<?php echo $row['mabh']; ?>" id="mabh" name="mabh" />
-			<div class="twocol">
-				<?php if((isset($_COOKIE['pass'])) && ($_COOKIE['pass'] =='good')): ?>
+			
+			<?php if((isset($_COOKIE['pass'])) && ($_COOKIE['pass'] =='good')): ?>
 				<a id="update" href="#" data-role="button" data-inline="true" data-theme="b" data-mini="true">Cập Nhật Mã Bài Hát</a><?php endif;?><br/>
-				<input type="hidden" name="idBH" id="idBH" value="<?php echo $_GET['id'];?>" />
-			</div>
-			<div class="tencol last">
-				<div id="mess"></div>
-			</div>
+			<input type="hidden" name="idBH" id="idBH" value="<?php echo $_GET['id'];?>" />
 			<strong>Ca Sĩ:</strong> <?php echo $row['casi']; ?><br/>
 			<strong>Nhạc Sĩ: </strong><?php echo $row['nhacsi']; ?>
 		</div>

@@ -38,7 +38,7 @@ $listBH = $db->listBH();
 		<ul>
 			<li><a href="casi.php" data-transition="slide" data-inline="true">Ca Sĩ</a></li>
             <li><a href="index.php" class="ui-btn-active ui-state-persist" data-transition="slide" data-inline="true">Bài Hát</a></li>
-			<li><a href="loibh.php" data-transition="slide" data-inline="true">Lời Bài Hát</a></li>
+			<li><a href="nhacsi.php" data-transition="slide" data-inline="true">Nhạc Sĩ</a></li>
 			<li><a href="member.php" data-transition="slide" data-inline="true">Member</a></li>
 		</ul>
 	</div><!-- /navbar -->
