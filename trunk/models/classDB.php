@@ -3,12 +3,12 @@ class db {
 	public $conn = NULL;
 	public $result = NULL;
 	public $host="localhost";
-	//public $user="joomlavi";
-	//public $pass="sbUM0iz2";
-	//public $database="joomlavi_karaoke";
-	public $user="root";
-	public $pass="";
-	public $database="karaoke";
+	public $user="joomlavi";
+	public $pass="IdWcMZdN";
+	public $database="joomlavi_karaoke";
+	//public $user="root";
+	//public $pass="";
+	//public $database="karaoke";
 	private $author="Hung Phan";
 	protected $version="1.0";
 	function __construct(){
